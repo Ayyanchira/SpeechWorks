@@ -12,6 +12,8 @@
 		73B0FB982049A4290039F374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B0FB962049A4290039F374 /* Main.storyboard */; };
 		73B0FB9A2049A4290039F374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B0FB992049A4290039F374 /* Assets.xcassets */; };
 		73B0FB9D2049A4290039F374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B0FB9B2049A4290039F374 /* LaunchScreen.storyboard */; };
+		73BCED66204AD50B0092308E /* App test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73BCED65204AD50B0092308E /* App test.wav */; };
+		CDD89049FEE83703D05F5AE9 /* Pods_SpeechWorks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2BA1ABA5C72A64CF08A78F /* Pods_SpeechWorks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		73B0FB992049A4290039F374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73B0FB9C2049A4290039F374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73B0FB9E2049A4290039F374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73BCED65204AD50B0092308E /* App test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "App test.wav"; sourceTree = "<group>"; };
+		AD2BA1ABA5C72A64CF08A78F /* Pods_SpeechWorks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeechWorks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F3B7484F4C6936600A0CCF /* Pods-SpeechWorks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechWorks.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeechWorks/Pods-SpeechWorks.release.xcconfig"; sourceTree = "<group>"; };
+		F8F9E28191648B0DA2C1E209 /* Pods-SpeechWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechWorks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeechWorks/Pods-SpeechWorks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD89049FEE83703D05F5AE9 /* Pods_SpeechWorks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		376EA795D03A1E0791D8BF4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8F9E28191648B0DA2C1E209 /* Pods-SpeechWorks.debug.xcconfig */,
+				D5F3B7484F4C6936600A0CCF /* Pods-SpeechWorks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4D27ECCD53009A39654A6610 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD2BA1ABA5C72A64CF08A78F /* Pods_SpeechWorks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		73B0FB862049A4290039F374 = {
 			isa = PBXGroup;
 			children = (
 				73B0FB912049A4290039F374 /* SpeechWorks */,
 				73B0FB902049A4290039F374 /* Products */,
+				376EA795D03A1E0791D8BF4F /* Pods */,
+				4D27ECCD53009A39654A6610 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,7 @@
 		73B0FB912049A4290039F374 /* SpeechWorks */ = {
 			isa = PBXGroup;
 			children = (
+				73BCED64204AD4DF0092308E /* Audio */,
 				73B0FB922049A4290039F374 /* AppDelegate.swift */,
 				73B0FB942049A4290039F374 /* ViewController.swift */,
 				73B0FB962049A4290039F374 /* Main.storyboard */,
@@ -64,6 +91,14 @@
 			path = SpeechWorks;
 			sourceTree = "<group>";
 		};
+		73BCED64204AD4DF0092308E /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				73BCED65204AD50B0092308E /* App test.wav */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73B0FBA12049A4290039F374 /* Build configuration list for PBXNativeTarget "SpeechWorks" */;
 			buildPhases = (
+				CB6C46D3B4534022F60A60EB /* [CP] Check Pods Manifest.lock */,
 				73B0FB8B2049A4290039F374 /* Sources */,
 				73B0FB8C2049A4290039F374 /* Frameworks */,
 				73B0FB8D2049A4290039F374 /* Resources */,
+				FED389196120FFF04BD27F21 /* [CP] Embed Pods Frameworks */,
+				C7E88ECCE62458B03015B79F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +162,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				73B0FB9D2049A4290039F374 /* LaunchScreen.storyboard in Resources */,
+				73BCED66204AD50B0092308E /* App test.wav in Resources */,
 				73B0FB9A2049A4290039F374 /* Assets.xcassets in Resources */,
 				73B0FB982049A4290039F374 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7E88ECCE62458B03015B79F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeechWorks/Pods-SpeechWorks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB6C46D3B4534022F60A60EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeechWorks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FED389196120FFF04BD27F21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpeechWorks/Pods-SpeechWorks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeechWorks/Pods-SpeechWorks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		73B0FB8B2049A4290039F374 /* Sources */ = {
@@ -272,6 +365,7 @@
 		};
 		73B0FBA22049A4290039F374 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8F9E28191648B0DA2C1E209 /* Pods-SpeechWorks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +381,7 @@
 		};
 		73B0FBA32049A4290039F374 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F3B7484F4C6936600A0CCF /* Pods-SpeechWorks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
