@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		734EB561204B304A000AE733 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734EB560204B304A000AE733 /* HomeViewController.swift */; };
 		73B0FB932049A4290039F374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B0FB922049A4290039F374 /* AppDelegate.swift */; };
 		73B0FB952049A4290039F374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B0FB942049A4290039F374 /* ViewController.swift */; };
 		73B0FB982049A4290039F374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B0FB962049A4290039F374 /* Main.storyboard */; };
 		73B0FB9A2049A4290039F374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B0FB992049A4290039F374 /* Assets.xcassets */; };
 		73B0FB9D2049A4290039F374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B0FB9B2049A4290039F374 /* LaunchScreen.storyboard */; };
 		73BCED66204AD50B0092308E /* App test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73BCED65204AD50B0092308E /* App test.wav */; };
+		73E46630204EC10D0001C356 /* LoadAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E4662F204EC10D0001C356 /* LoadAudioViewController.swift */; };
 		CDD89049FEE83703D05F5AE9 /* Pods_SpeechWorks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2BA1ABA5C72A64CF08A78F /* Pods_SpeechWorks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		734EB560204B304A000AE733 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		73B0FB8F2049A4290039F374 /* SpeechWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B0FB922049A4290039F374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B0FB942049A4290039F374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +28,7 @@
 		73B0FB9C2049A4290039F374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73B0FB9E2049A4290039F374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73BCED65204AD50B0092308E /* App test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "App test.wav"; sourceTree = "<group>"; };
+		73E4662F204EC10D0001C356 /* LoadAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAudioViewController.swift; sourceTree = "<group>"; };
 		AD2BA1ABA5C72A64CF08A78F /* Pods_SpeechWorks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeechWorks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F3B7484F4C6936600A0CCF /* Pods-SpeechWorks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechWorks.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeechWorks/Pods-SpeechWorks.release.xcconfig"; sourceTree = "<group>"; };
 		F8F9E28191648B0DA2C1E209 /* Pods-SpeechWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechWorks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeechWorks/Pods-SpeechWorks.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				73B0FB992049A4290039F374 /* Assets.xcassets */,
 				73B0FB9B2049A4290039F374 /* LaunchScreen.storyboard */,
 				73B0FB9E2049A4290039F374 /* Info.plist */,
+				734EB560204B304A000AE733 /* HomeViewController.swift */,
+				73E4662F204EC10D0001C356 /* LoadAudioViewController.swift */,
 			);
 			path = SpeechWorks;
 			sourceTree = "<group>";
@@ -230,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				73B0FB952049A4290039F374 /* ViewController.swift in Sources */,
+				73E46630204EC10D0001C356 /* LoadAudioViewController.swift in Sources */,
 				73B0FB932049A4290039F374 /* AppDelegate.swift in Sources */,
+				734EB561204B304A000AE733 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

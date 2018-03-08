@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HZ6-N2-NhT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,127 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Light</string>
+        </array>
+        <array key="Savoye.ttc">
+            <string>SavoyeLetPlain</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="OLX-op-1j7">
+            <objects>
+                <viewController id="TkI-tA-7oV" customClass="HomeViewController" customModule="SpeechWorks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xS4-HO-hd4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="bottom" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SkyImage" translatesAutoresizingMaskIntoConstraints="NO" id="TOU-iD-het">
+                                <rect key="frame" x="0.0" y="-413" width="375" height="1080"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpy-RQ-Upb">
+                                <rect key="frame" x="96" y="201" width="182" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="ZsD-1M-QMK"/>
+                                    <constraint firstAttribute="width" constant="182" id="jsc-0G-eaw"/>
+                                </constraints>
+                                <state key="normal" title="Speech Recognition" image="ArrowButton"/>
+                                <connections>
+                                    <action selector="speechRecognitionButtonPressed:" destination="TkI-tA-7oV" eventType="touchUpInside" id="sGO-a9-xWQ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="QxH-wu-yyk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Recognition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrx-EG-hG5">
+                                <rect key="frame" x="111" y="222" width="114" height="51"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.63643718466528565" green="0.23309949259003088" blue="0.76681302402921292" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPY-Tk-5tU">
+                                <rect key="frame" x="96" y="383" width="182" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="jzG-9y-Vka"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ArrowButton"/>
+                                <connections>
+                                    <segue destination="WCn-dl-2gE" kind="show" id="5yi-Bg-b33"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transcribe Audio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-Iy-QqN">
+                                <rect key="frame" x="111" y="404" width="114" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="JSD-L1-CiK"/>
+                                    <constraint firstAttribute="height" constant="51" id="ow0-DC-zYr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.63643718469999999" green="0.23309949260000001" blue="0.76681302399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wpy-RQ-Upb" firstAttribute="centerX" secondItem="TOU-iD-het" secondAttribute="centerX" id="IcE-62-NIQ"/>
+                            <constraint firstItem="rrx-EG-hG5" firstAttribute="top" secondItem="wpy-RQ-Upb" secondAttribute="bottom" constant="-71" id="LRC-JS-UhG"/>
+                            <constraint firstItem="GZi-v2-35m" firstAttribute="bottom" secondItem="TOU-iD-het" secondAttribute="bottom" id="M3C-Qi-9Rb"/>
+                            <constraint firstItem="wpy-RQ-Upb" firstAttribute="top" secondItem="GZi-v2-35m" secondAttribute="top" constant="137" id="OPC-kX-c65"/>
+                            <constraint firstItem="rrx-EG-hG5" firstAttribute="centerX" secondItem="wpy-RQ-Upb" secondAttribute="centerX" constant="-19.5" id="QDq-Xq-ALp"/>
+                            <constraint firstItem="MPY-Tk-5tU" firstAttribute="trailing" secondItem="wpy-RQ-Upb" secondAttribute="trailing" id="S9A-xL-NLQ"/>
+                            <constraint firstItem="TOU-iD-het" firstAttribute="leading" secondItem="GZi-v2-35m" secondAttribute="leading" id="UZ6-K1-2Fv"/>
+                            <constraint firstItem="MPY-Tk-5tU" firstAttribute="top" secondItem="wpy-RQ-Upb" secondAttribute="bottom" constant="90" id="Zvj-Ji-kCr"/>
+                            <constraint firstItem="ZWz-Iy-QqN" firstAttribute="top" secondItem="MPY-Tk-5tU" secondAttribute="top" constant="21" id="doS-Vq-tus"/>
+                            <constraint firstItem="wpy-RQ-Upb" firstAttribute="leading" secondItem="rrx-EG-hG5" secondAttribute="trailing" constant="-129" id="kAH-XG-ct3"/>
+                            <constraint firstItem="GZi-v2-35m" firstAttribute="trailing" secondItem="TOU-iD-het" secondAttribute="trailing" id="lk3-pe-pm5"/>
+                            <constraint firstItem="rrx-EG-hG5" firstAttribute="centerY" secondItem="wpy-RQ-Upb" secondAttribute="centerY" id="oOb-sB-Uxc"/>
+                            <constraint firstItem="MPY-Tk-5tU" firstAttribute="leading" secondItem="wpy-RQ-Upb" secondAttribute="leading" id="qYG-f6-wqS"/>
+                            <constraint firstItem="MPY-Tk-5tU" firstAttribute="leading" secondItem="ZWz-Iy-QqN" secondAttribute="trailing" constant="-129" id="uzw-gx-xL4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GZi-v2-35m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mmX-Pc-b3c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSF-iP-BT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266.39999999999998" y="32.833583208395808"/>
+        </scene>
+        <!--Load file-->
+        <scene sceneID="pj4-4l-Rog">
+            <objects>
+                <viewController id="WCn-dl-2gE" customClass="LoadAudioViewController" customModule="SpeechWorks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0vx-0T-SYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="967-Ba-uem">
+                                <rect key="frame" x="172" y="554" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="WCn-dl-2gE" eventType="touchUpInside" id="9e6-e9-f0y"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Dummy Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-Dv-aLL">
+                                <rect key="frame" x="16" y="89" width="343" height="321"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NgK-yG-0du"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Load file" id="J5U-hu-BcA"/>
+                    <connections>
+                        <outlet property="textView" destination="ahK-Dv-aLL" id="wN8-gw-X3N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVp-ol-uoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="614.84257871064472"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,21 +138,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGe-LX-wXU">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="recordSpeechButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILw-6n-YtZ"/>
-                                </connections>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="f7B-IU-pri">
+                                <rect key="frame" x="0.0" y="415" width="375" height="252"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="252" id="B1i-wt-6J5"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyF-ck-mcm">
+                                <rect key="frame" x="153" y="355.5" width="69" height="20"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGe-LX-wXU">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="20"/>
+                                        <state key="normal" title="Record"/>
+                                        <connections>
+                                            <action selector="recordSpeechButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILw-6n-YtZ"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eQq-o0-Wb5">
+                                        <rect key="frame" x="49" y="0.0" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="Lsd-wH-qPd"/>
+                                    <constraint firstAttribute="height" constant="20" id="x9a-Sc-JbG"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f7B-IU-pri" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NrF-M2-57g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f7B-IU-pri" secondAttribute="trailing" id="Pto-d8-fva"/>
+                            <constraint firstItem="GyF-ck-mcm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bPD-0x-ZmV"/>
+                            <constraint firstItem="GyF-ck-mcm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kJv-tm-D25"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f7B-IU-pri" secondAttribute="bottom" id="n2I-HD-RSt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="eQq-o0-Wb5" id="OPX-pq-1L4"/>
+                        <outlet property="speechToTextView" destination="f7B-IU-pri" id="ZFW-kj-Cdd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="700" y="-540"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F45-5o-m33">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HZ6-N2-NhT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UXW-OV-kO3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TkI-tA-7oV" kind="relationship" relationship="rootViewController" id="UAQ-vF-IB9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CwZ-Uk-fFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1489" y="33"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ArrowButton" width="352" height="239"/>
+        <image name="SkyImage" width="1920" height="1080"/>
+    </resources>
 </document>

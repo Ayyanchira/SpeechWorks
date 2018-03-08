@@ -17,6 +17,9 @@ class ViewController: UIViewController,SFSpeechRecognizerDelegate {
     let request = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask:SFSpeechRecognitionTask?
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var speechToTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         if SFSpeechRecognizer.authorizationStatus() == SFSpeechRecognizerAuthorizationStatus.notDetermined{
@@ -28,9 +31,11 @@ class ViewController: UIViewController,SFSpeechRecognizerDelegate {
     
     @IBAction func recordSpeechButtonPressed(_ sender: UIButton) {
         recordAndRecognizeSpeech()
-        
     }
+    
     func recordAndRecognizeSpeech(){
+        
+
         let node = audioEngine.inputNode
         let recordingFormat = node.outputFormat(forBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, time) in
@@ -38,6 +43,7 @@ class ViewController: UIViewController,SFSpeechRecognizerDelegate {
         }
         audioEngine.prepare()
         do{
+
             try audioEngine.start()
         }catch{
             return print(error)
@@ -53,9 +59,13 @@ class ViewController: UIViewController,SFSpeechRecognizerDelegate {
         }
         
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
-            if let result = result{
+            self.activityIndicator.startAnimating()
+                        if let result = result{
                 let obtainedString = result.bestTranscription.formattedString
                 print(obtainedString)
+                self.activityIndicator.stopAnimating()
+                self.speechToTextView.text = obtainedString
+
             }else if let error = error{
                 print(error)
             }
